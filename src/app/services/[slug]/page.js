@@ -1,12 +1,11 @@
 import { notFound } from "next/navigation";
-import { Search, HardHat, FileText, UserCheck, Building, Users2 } from "lucide-react";
 import ServiceDetailsClient from "@/components/ServiceDetailsClient";
 
 const servicesData = {
   "executive-search": {
     title: "Executive Search",
     subtitle: "Senior Leadership & Management Recruitment",
-    icon: Search,
+    icon: "Search",
     desc: "Golden Manpower Consultants provides specialized headhunting and executive search solutions to recruit C-level executives, directors, VP-level officers, and critical mid-management personnel. We align our sourcing strategy with your business goals, corporate culture, and technical standards.",
     features: [
       "Board-level & C-Suite Recruitment campaigns",
@@ -20,7 +19,7 @@ const servicesData = {
   "labour-contracting": {
     title: "Labour Contracting",
     subtitle: "Sub-Contracting & Project Staffing Solutions",
-    icon: HardHat,
+    icon: "HardHat",
     desc: "We deliver flexible supply arrangements for certified blue-collar workers, technicians, machine operators, and construction laborers. Our sub-contracting models enable you to scale workforces up and down to match construction cycles or heavy industrial project phases.",
     features: [
       "Flexible short-term and long-term manpower leasing",
@@ -34,7 +33,7 @@ const servicesData = {
   "document-attestation": {
     title: "Document Attestation",
     subtitle: "Educational & Professional Certificate Authentication",
-    icon: FileText,
+    icon: "FileText",
     desc: "We offer end-to-end attestation and verification procedures for certificates required during overseas employment. We coordinate with ministries, embassies, and consular branches to authenticate degrees, diplomas, marriage licenses, and work records.",
     features: [
       "HRD & Notary verification coordination",
@@ -48,7 +47,7 @@ const servicesData = {
   "domestic-recruitment": {
     title: "Domestic Recruitment",
     subtitle: "Staffing & Professional Sourcing within India",
-    icon: UserCheck,
+    icon: "UserCheck",
     desc: "GMC delivers comprehensive permanent and temporary hiring options within India. We support local projects and corporate offices by sourcing, vetting, and interviewing candidates for permanent placement, reducing recruitment cycles.",
     features: [
       "Permanent placement Sourcing & Screening",
@@ -62,7 +61,7 @@ const servicesData = {
   "hr-outsourcing": {
     title: "HR Outsourcing",
     subtitle: "Payroll, Stat Compliance & Workforce Admin",
-    icon: Building,
+    icon: "Building",
     desc: "We support global businesses with HR outsourcing. We coordinate payroll execution, wage records, employee insurance schemes, visa compliance audits, and local labor clearances, enabling you to focus on core operations.",
     features: [
       "Automated payroll calculation and direct salary dispersals",
@@ -76,7 +75,7 @@ const servicesData = {
   recruitment: {
     title: "Recruitment",
     subtitle: "Bulk Sourcing & International Placements",
-    icon: Users2,
+    icon: "Users2",
     desc: "We provide large-scale candidate mobilization for infrastructure, heavy engineering, marine docks, and construction. Our team manages advertising campaigns, screening, trade tests, document verifications, visa runs, and departures.",
     features: [
       "Large-scale sourcing campaigns & job advertisements",

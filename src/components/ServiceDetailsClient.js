@@ -6,11 +6,26 @@ import {
   ChevronLeft,
   Briefcase,
   Layers,
+  Search,
+  HardHat,
+  FileText,
+  UserCheck,
+  Building,
+  Users2,
 } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
+const iconMap = {
+  Search,
+  HardHat,
+  FileText,
+  UserCheck,
+  Building,
+  Users2,
+};
+
 export default function ServiceDetailsClient({ slug, data }) {
-  const Icon = data.icon;
+  const Icon = iconMap[data.icon] || Search;
 
   return (
     <div className="w-full bg-primary-dark">
