@@ -9,18 +9,10 @@ export default function SplashLoader() {
 
   useEffect(() => {
     setMounted(true);
-    
-    // Check if splash has been shown in this tab session
-    const hasVisited = sessionStorage.getItem("gmc_visited");
-    if (hasVisited) {
-      setLoading(false);
-      return;
-    }
 
     const timer = setTimeout(() => {
       setLoading(false);
-      sessionStorage.setItem("gmc_visited", "true");
-    }, 1800); // 1.8 seconds splash loader
+    }, 1500); // 1.5 seconds splash loader
 
     return () => clearTimeout(timer);
   }, []);
