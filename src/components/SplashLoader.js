@@ -1,0 +1,104 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+export default function SplashLoader() {
+  const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    
+    // Check if splash has been shown in this tab session
+    const hasVisited = sessionStorage.getItem("gmc_visited");
+    if (hasVisited) {
+      setLoading(false);
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+      sessionStorage.setItem("gmc_visited", "true");
+    }, 1800); // 1.8 seconds splash loader
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Avoid hydration mismatch issues by only rendering client-side UI when mounted
+  if (!mounted) return null;
+
+  return (
+    <AnimatePresence>
+      {loading && (
+        <motion.div
+          initial={{ opacity: 1 }}
+          exit={{
+            opacity: 0,
+            transition: { duration: 0.5, ease: "easeInOut" },
+          }}
+          className="fixed inset-0 bg-[#070B13] z-[9999] flex flex-col items-center justify-center pointer-events-auto select-none"
+        >
+          {/* Ambient Glow */}
+          <div className="absolute w-[400px] h-[400px] bg-gold-500/5 rounded-full blur-[100px] pointer-events-none animate-pulse-slow" />
+          
+          <div className="relative flex flex-col items-center z-10">
+            {/* Animated GMC Monogram Logo */}
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{
+                scale: 1,
+                opacity: 1,
+                transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+              }}
+              className="relative w-24 h-24 flex items-center justify-center rounded-2xl bg-gradient-to-br from-gold-600 to-gold-400 p-0.5 shadow-2xl shadow-gold-500/20"
+            >
+              <div className="w-full h-full bg-[#070B13] rounded-[14px] flex items-center justify-center">
+                <span className="font-serif font-black text-5xl text-gradient-gold">G</span>
+              </div>
+            </motion.div>
+
+            {/* Brand Name */}
+            <motion.div
+              initial={{ y: 15, opacity: 0 }}
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: { delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+              }}
+              className="flex flex-col items-center text-center mt-6"
+            >
+              <span className="font-serif font-black text-xl tracking-[0.25em] text-gradient-gold">
+                GOLDEN MANPOWER
+              </span>
+              <span className="text-xs text-slate-400 tracking-[0.3em] font-sans uppercase mt-1.5">
+                Consultants
+              </span>
+            </motion.div>
+
+            {/* Premium Loading Progress Bar */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { delay: 0.5, duration: 0.4 },
+              }}
+              className="w-48 h-[2px] bg-white/5 rounded-full overflow-hidden mt-8 relative"
+            >
+              <motion.div
+                initial={{ left: "-100%" }}
+                animate={{ left: "100%" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1.5,
+                  ease: "easeInOut",
+                }}
+                className="absolute top-0 bottom-0 w-2/3 bg-gradient-to-r from-transparent via-gold-500 to-transparent"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
