@@ -65,6 +65,46 @@ export const metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "EmploymentAgency",
+  "name": "Golden Manpower Consultants",
+  "image": "https://www.goldenmanpower.com/logo-preview.png",
+  "@id": "https://www.goldenmanpower.com/#organization",
+  "url": "https://www.goldenmanpower.com",
+  "telephone": "+919769629783",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1A-201, Shree Ram Square, Above Tata Showroom, Vartak Road, Virar (West)",
+    "addressLocality": "Palghar",
+    "addressRegion": "Maharashtra",
+    "postalCode": "401303",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 19.462319,
+    "longitude": 72.8020786
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:30",
+    "closes": "18:30"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/golden-manpower-consultants/"
+  ]
+};
+
 export default function RootLayout({ children }) {
   return (
     <html
@@ -72,6 +112,10 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col bg-primary text-slate-100 selection:bg-gold-500/30 selection:text-gold-200">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <SplashLoader />
         <Navbar />
         <main className="flex-1 flex flex-col">{children}</main>

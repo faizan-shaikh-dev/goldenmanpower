@@ -176,6 +176,46 @@ export default function ContactClient() {
           </div>
         </div>
       </section>
+
+      {/* Google Maps Section */}
+      <section className="py-20 bg-primary-dark border-t border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold-600/5 rounded-full blur-[80px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs font-bold tracking-widest text-gold-500 uppercase block mb-3">
+              Location Map
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-serif font-black text-white">
+              Find Our Head Office
+            </h2>
+            <p className="text-slate-400 text-xs mt-2 leading-relaxed">
+              Visit our office in Virar, Maharashtra for physical candidate interviews, documentation audits, and corporate consultations.
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-full h-[400px] rounded-3xl overflow-hidden border border-white/5 bg-primary/40 shadow-2xl relative group"
+          >
+            <iframe
+              src="https://maps.google.com/maps?q=Shree%20Ram%20Square%2C%20Vartak%20Road%2C%20Virar%20West%2C%20Maharashtra%2C%20India&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Golden Manpower Consultants Head Office Map"
+              className="grayscale contrast-[1.1] invert-[0.92] opacity-80 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100 transition-all duration-700 ease-out"
+            />
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
