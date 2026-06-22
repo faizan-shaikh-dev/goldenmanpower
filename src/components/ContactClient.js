@@ -13,6 +13,7 @@ export default function ContactClient() {
       address: "Meydan Grandstand, 6th Floor, Meydan Road, Nad Al Sheba 1, Dubai, UAE.",
       phone: "+971 56 765 2561",
       landline: "+971 04 224 8016",
+      whatsapp: "+971 58 574 5677",
       email: "hruae@goldenmanpower.com",
     },
     {
@@ -115,6 +116,22 @@ export default function ContactClient() {
                           <Phone size={14} className="text-gold-500 shrink-0" />
                           <a href={`tel:${office.landline.replace(/\s+/g, "")}`} className="hover:text-gold-400 transition-colors">
                             Landline: {office.landline}
+                          </a>
+                        </div>
+                      )}
+                      {office.whatsapp && (
+                        <div className="flex gap-2 items-center">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="14"
+                            height="14"
+                            fill="currentColor"
+                            className="text-gold-500 shrink-0"
+                          >
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.498 1.45 5.418 1.451 5.514 0 10.002-4.486 10.006-10 0-2.672-1.041-5.184-2.93-7.076-1.89-1.892-4.402-2.933-7.078-2.933-5.513 0-10.002 4.487-10.006 10-.001 1.86.486 3.68 1.41 5.281l-.952 3.479 3.582-.942zm12.355-6.52c-.3-.15-1.77-.875-2.04-.975-.27-.1-.465-.15-.66.15-.195.3-.755.975-.925 1.175-.17.2-.34.225-.64.075-.3-.15-1.265-.465-2.41-1.485-.89-.795-1.49-1.78-1.665-2.08-.175-.3-.02-.46.13-.61.135-.135.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.66-1.59-.9-2.175-.235-.565-.475-.487-.66-.496-.17-.008-.365-.01-.56-.01-.195 0-.515.075-.78.365-.265.29-1.01.99-1.01 2.415 0 1.425 1.035 2.8 1.18 2.985.145.185 2.035 3.11 4.93 4.36.685.295 1.22.47 1.635.6.69.22 1.315.19 1.81.115.55-.085 1.77-.725 2.02-1.415.25-.69.25-1.285.175-1.415-.075-.13-.27-.23-.57-.38z" />
+                          </svg>
+                          <a href={`https://wa.me/${office.whatsapp.replace(/[^\d]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-gold-400 transition-colors">
+                            {office.whatsapp}
                           </a>
                         </div>
                       )}
