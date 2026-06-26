@@ -177,29 +177,46 @@ export default function HomeClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Grid 1: Images Mock/Branding */}
-            <div className="lg:col-span-5 relative flex justify-center">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-5 relative w-full flex justify-center py-6 sm:py-0"
+            >
               <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-gold-500/5 rounded-full blur-[80px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
-              <div className="relative border border-white/10 rounded-2xl p-6 sm:p-10 glass max-w-sm w-full shadow-2xl">
-                <span className="text-[10px] font-bold text-gold-500 tracking-widest uppercase mb-1 block">
-                  Regd License No.
-                </span>
-                <h4 className="text-sm font-bold text-white mb-6 font-mono tracking-tight border-b border-white/5 pb-2">
-                  B-0384/MUM/PER/1000+/5/8135/2008
-                </h4>
-                <blockquote className="text-slate-300 italic text-sm leading-relaxed mb-6">
-                  "Our recruitment methodology is built on detailed requirement analysis, skill-based evaluation, and strict adherence to regulatory frameworks."
-                </blockquote>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center">
-                    <Award size={18} className="text-gold-500" />
-                  </div>
-                  <div>
-                    <h5 className="text-xs font-bold text-white">Ministry of External Affairs</h5>
-                    <p className="text-[10px] text-slate-500">Government of India Approved</p>
+              
+              <div className="relative w-full max-w-md">
+                {/* Sourcing Image */}
+                <div className="relative w-full h-[320px] sm:h-[360px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                  <img 
+                    src="/home3-img04.jpg" 
+                    alt="GMC Sourcing Operations" 
+                    className="w-full h-full object-cover brightness-[0.85] contrast-[1.05]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent" />
+                </div>
+                
+                {/* Floating Licence Badge */}
+                <div className="absolute -bottom-6 -right-2 sm:-right-6 border border-white/10 rounded-xl p-4 sm:p-5 glass max-w-[240px] sm:max-w-[260px] shadow-2xl z-20 hover:border-gold-500/30 transition-all duration-300">
+                  <span className="text-[9px] font-bold text-gold-500 tracking-widest uppercase mb-1 block">
+                    Regd License No.
+                  </span>
+                  <h4 className="text-[11px] sm:text-xs font-bold text-white mb-3 font-mono tracking-tight pb-1.5 border-b border-white/5">
+                    B-0384/MUM/PER/1000+/5/8135/2008
+                  </h4>
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-7 h-7 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center shrink-0">
+                      <Award size={14} className="text-gold-500" />
+                    </div>
+                    <div>
+                      <h5 className="text-[10px] font-bold text-white leading-none">Ministry of External Affairs</h5>
+                      <p className="text-[8px] text-slate-500 mt-0.5">Govt. of India Approved</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Grid 2: About Copy */}
             <div className="lg:col-span-7 flex flex-col gap-6 text-left">
@@ -239,10 +256,12 @@ export default function HomeClient() {
             <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gold-500/5 rounded-full blur-[80px] pointer-events-none" />
 
             <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left gap-3.5">
-              <div className="relative w-36 h-36 rounded-full bg-gradient-to-br from-gold-600 to-gold-400 p-0.5 shadow-xl shadow-gold-500/10">
-                <div className="w-full h-full bg-primary-dark rounded-full flex items-center justify-center">
-                  <Users size={48} className="text-gold-500" />
-                </div>
+              <div className="relative w-36 h-36 rounded-full bg-gradient-to-br from-gold-600 to-gold-400 p-0.5 shadow-xl shadow-gold-500/10 overflow-hidden shrink-0">
+                <img 
+                  src="/md-profile.jpg" 
+                  alt="Ashish K. Singh, MD" 
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white font-serif">Ashish K. Singh</h4>
@@ -447,7 +466,7 @@ export default function HomeClient() {
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full shadow-lg shadow-green-500/20 flex items-center justify-center hover:scale-110 active:scale-95 transition-all group"
         aria-label="Contact us on WhatsApp"
       >
-        <span className="absolute right-16 bg-black/80 backdrop-blur text-white text-[10px] font-bold py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-white/10">
+        <span className="absolute right-16 bg-[#000000]/80 backdrop-blur text-[#ffffff] text-[10px] font-bold py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-[#ffffff]/10">
           Chat With Us
         </span>
         <svg
@@ -455,7 +474,7 @@ export default function HomeClient() {
           width="26"
           height="26"
           fill="currentColor"
-          className="text-white"
+          className="text-[#ffffff]"
         >
           <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.498 1.45 5.418 1.451 5.514 0 10.002-4.486 10.006-10 0-2.672-1.041-5.184-2.93-7.076-1.89-1.892-4.402-2.933-7.078-2.933-5.513 0-10.002 4.487-10.006 10-.001 1.86.486 3.68 1.41 5.281l-.952 3.479 3.582-.942zm12.355-6.52c-.3-.15-1.77-.875-2.04-.975-.27-.1-.465-.15-.66.15-.195.3-.755.975-.925 1.175-.17.2-.34.225-.64.075-.3-.15-1.265-.465-2.41-1.485-.89-.795-1.49-1.78-1.665-2.08-.175-.3-.02-.46.13-.61.135-.135.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.66-1.59-.9-2.175-.235-.565-.475-.487-.66-.496-.17-.008-.365-.01-.56-.01-.195 0-.515.075-.78.365-.265.29-1.01.99-1.01 2.415 0 1.425 1.035 2.8 1.18 2.985.145.185 2.035 3.11 4.93 4.36.685.295 1.22.47 1.635.6.69.22 1.315.19 1.81.115.55-.085 1.77-.725 2.02-1.415.25-.69.25-1.285.175-1.415-.075-.13-.27-.23-.57-.38z" />
         </svg>

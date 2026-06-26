@@ -59,9 +59,20 @@ export default function Footer() {
           {/* Company Brief */}
           <div className="flex flex-col gap-5">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="relative w-9 h-9 flex items-center justify-center rounded bg-gradient-to-br from-gold-600 to-gold-400 p-0.5 shadow-md shadow-gold-500/5">
-                <div className="w-full h-full bg-primary-dark rounded flex items-center justify-center">
-                  <span className="font-serif font-black text-sm text-gradient-gold">G</span>
+              <div className="flex items-center gap-2 shrink-0">
+                <div className="relative w-11 h-11 flex items-center justify-center">
+                  <img 
+                    src="/gmc-logo1.png" 
+                    alt="GMC Emblem" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="relative w-11 h-11 flex items-center justify-center">
+                  <img 
+                    src="/gmc-logo2.png" 
+                    alt="GMC Seal" 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
               <div className="flex flex-col">

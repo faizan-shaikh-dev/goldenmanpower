@@ -43,21 +43,43 @@ export default function ClientsClient() {
     },
   ];
 
-  const clientLogoPlaceholders = [
-    "Gulf Infrastructure Corp",
-    "Emirates Petrochemical Ltd",
-    "Oman Marine Logistics",
-    "Kenya Power & Ports",
-    "GCC Civil Contracting",
-    "Nairobi Hospitality Group",
+  const clientsList = [
+    { name: "Al Barrak Group", logo: "/clients-logo/al barrak .png" },
+    { name: "Bingatti Holding", logo: "/clients-logo/Bingati .png" },
+    { name: "Danat Group", logo: "/clients-logo/Danat Group .png" },
+    { name: "Hills & Fort", logo: "/clients-logo/Hills And Fort .jpeg" },
+    { name: "Maden Gold", logo: "/clients-logo/Maden .webp" },
+    { name: "Oman Plastic Industries", logo: "/clients-logo/Oman Plastic Industries .jpeg" },
+    { name: "Gulf Contracting", logo: "/clients-logo/gulf .png" },
+    { name: "Saudi Binladen Group", logo: "/clients-logo/saudi-binladen-group-logo-png_seeklogo-122930.png" },
+    { name: "Siafa Dates", logo: "/clients-logo/siafa dates .jpeg" },
+    { name: "SOS HR Solutions", logo: "/clients-logo/sos_hr_solutions_logo.jpeg" },
+    { name: "Tadmur Holding", logo: "/clients-logo/tadmur_holding_logo.jpeg" },
+    { name: "Vision Morocco", logo: "/clients-logo/vision morocco .jpeg" },
+    { name: "Manpower Saudi Arabia", logo: "/clients-logo/manpowersaudiarabia_logo.jpeg" },
+    { name: "Salfo & Associates", logo: "/clients-logo/salfo__associates_sa__logo.jpeg" },
+    { name: "JAL International", logo: "/clients-logo/jal .png" },
+    { name: "Human Resources Company", logo: "/clients-logo/human resources compney .jpeg" },
+    { name: "United Dairy Company", logo: "/clients-logo/1631341583109.jpeg" },
+    { name: "National Recruitment Corp", logo: "/clients-logo/1698670332350.jpeg" },
+    { name: "Al Jaber Contracting", logo: "/clients-logo/LOGO-200x200.jpeg" }
   ];
 
   return (
     <div className="w-full">
       {/* Banner */}
       <section className="relative bg-primary-dark border-b border-white/5 py-20 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold-600/5 rounded-full blur-[80px] pointer-events-none" />
+        {/* Background Image Banner */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/header-bg.png"
+            alt="GMC Partners & Clients"
+            className="w-full h-full object-cover opacity-15 brightness-75 scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/60 to-transparent" />
+        </div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none z-0" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold-600/5 rounded-full blur-[80px] pointer-events-none z-0" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <span className="text-[10px] font-bold text-gold-500 tracking-widest uppercase block mb-2">
@@ -165,17 +187,79 @@ export default function ClientsClient() {
                   <h3 className="text-base font-bold text-white font-serif">Corporate Partnerships</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  {clientLogoPlaceholders.map((logo, i) => (
-                    <div
+                  {clientsList.slice(0, 6).map((client, i) => (
+                    <motion.div
                       key={i}
-                      className="bg-primary border border-white/5 py-4 px-3 rounded-xl flex items-center justify-center text-center text-[10px] font-bold text-slate-400 hover:text-gold-400 hover:border-gold-500/20 transition-all shadow-sm"
+                      initial={{ opacity: 0, scale: 0.85, y: 15 }}
+                      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ 
+                        duration: 0.4, 
+                        delay: i * 0.05, 
+                        type: "spring", 
+                        stiffness: 100 
+                      }}
+                      whileHover={{ 
+                        scale: 1.05,
+                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        boxShadow: "0 10px 20px -10px rgba(212, 175, 55, 0.15)"
+                      }}
+                      className="bg-primary border border-white/5 py-3 px-4 rounded-xl flex items-center justify-center h-20 transition-all shadow-sm cursor-pointer group"
                     >
-                      <Building2 size={12} className="mr-1.5 shrink-0" /> {logo}
-                    </div>
+                      <img 
+                        src={client.logo} 
+                        alt={client.name} 
+                        className="max-w-full max-h-full object-contain filter brightness-[0.8] group-hover:brightness-[1.1] transition-all duration-300"
+                      />
+                    </motion.div>
                   ))}
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Clients Full-Width Section */}
+      <section className="py-24 bg-primary border-t border-white/5 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-xs font-bold tracking-widest text-gold-500 uppercase block mb-3">
+              Corporate Portfolio
+            </span>
+            <h2 className="text-3xl font-serif font-black text-white font-serif">
+              Our Esteemed Clients & Partners
+            </h2>
+            <p className="text-slate-400 text-xs mt-3 leading-relaxed">
+              We are proud to partner with leading enterprises across the GCC and internationally, delivering skilled workforces that drive operational success.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {clientsList.map((client, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: (i % 6) * 0.04 
+                }}
+                whileHover={{ 
+                  scale: 1.05,
+                  borderColor: "rgba(212, 175, 55, 0.3)",
+                  boxShadow: "0 12px 24px -12px rgba(212, 175, 55, 0.2)"
+                }}
+                className="bg-primary-dark border border-white/5 py-4 px-5 rounded-2xl flex items-center justify-center h-24 transition-all duration-300 shadow-md cursor-pointer group"
+              >
+                <img 
+                  src={client.logo} 
+                  alt={client.name} 
+                  className="max-w-full max-h-full object-contain filter brightness-[0.8] group-hover:brightness-[1.15] transition-all duration-300"
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

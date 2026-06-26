@@ -1,21 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Premium Palette */
-  --color-primary-dark: #070B13;
-  --color-primary: #0D1424;
-  --color-primary-light: #172237;
+  /* Premium Palette map to CSS variables */
+  --color-primary-dark: var(--primary-dark);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
   
-  --color-gold-50: #FDFBF3;
-  --color-gold-100: #F7EFC1;
-  --color-gold-200: #EED789;
-  --color-gold-300: #E1BD53;
-  --color-gold-400: #D3A12C;
-  --color-gold-500: #C28B15; /* GMC Gold */
-  --color-gold-600: #AA7310;
-  --color-gold-700: #8E5B0D;
-  --color-gold-800: #6E440B;
-  --color-gold-900: #55330A;
+  --color-white: var(--text-white);
+  --color-slate-100: var(--text-slate-100);
+  --color-slate-200: var(--text-slate-200);
+  --color-slate-300: var(--text-slate-300);
+  --color-slate-400: var(--text-slate-400);
+  --color-slate-500: var(--text-slate-500);
+  --color-slate-600: var(--text-slate-600);
+  
+  --color-gold-50: var(--gold-50);
+  --color-gold-100: var(--gold-100);
+  --color-gold-200: var(--gold-200);
+  --color-gold-300: var(--gold-300);
+  --color-gold-400: var(--gold-400);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
+  --color-gold-700: var(--gold-700);
+  --color-gold-800: var(--gold-800);
+  --color-gold-900: var(--gold-900);
   
   /* Fonts */
   --font-sans: var(--font-geist-sans), "Inter", Arial, sans-serif;
@@ -48,8 +56,82 @@
 }
 
 :root {
+  /* Default: Dark mode values */
+  --primary-dark: #070B13;
+  --primary: #0D1424;
+  --primary-light: #172237;
   --background: #070B13;
   --foreground: #F8FAFC;
+  
+  --text-white: #FFFFFF;
+  --text-slate-100: #F1F5F9;
+  --text-slate-200: #E2E8F0;
+  --text-slate-300: #CBD5E1;
+  --text-slate-400: #94A3B8;
+  --text-slate-500: #64748B;
+  --text-slate-600: #475569;
+  
+  --glass-bg: rgba(13, 20, 36, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.06);
+
+  /* Gold Color Definitions - Bright gold for Dark Mode contrast */
+  --gold-50: #FDFBF3;
+  --gold-100: #F7EFC1;
+  --gold-200: #EED789;
+  --gold-300: #E1BD53;
+  --gold-400: #D3A12C;
+  --gold-500: #C28B15; /* GMC Gold */
+  --gold-600: #AA7310;
+  --gold-700: #8E5B0D;
+  --gold-800: #6E440B;
+  --gold-900: #55330A;
+
+  --gold-text-gradient: linear-gradient(135deg, #FDFBF3 0%, #EED789 50%, #C28B15 100%);
+  --gold-bg-gradient: linear-gradient(135deg, #C28B15 0%, #EED789 50%, #C28B15 100%);
+}
+
+[data-theme='light'] {
+  /* Premium Light Theme - Warm Off-white / Cream with dark gold undertone text */
+  --primary-dark: #F5F5F0;  /* Warm Sand-Gray */
+  --primary: #FCFCFA;       /* Milky/Cream Soft White */
+  --primary-light: #EAE8DF; /* Soft Gold-Gray */
+  --background: #FCFCFA;
+  --foreground: #1E1B15;    /* Warm Charcoal Text */
+  
+  --text-white: #1E1B15;
+  --text-slate-100: #2D2922;
+  --text-slate-200: #3E3A33;
+  --text-slate-300: #4F4941;
+  --text-slate-400: #6E675F;
+  --text-slate-500: #8D867E;
+  --text-slate-600: #AFA9A2;
+  
+  --glass-bg: rgba(252, 252, 250, 0.75);
+  --glass-border: rgba(30, 27, 21, 0.08);
+
+  /* High-Contrast Premium Golds for Light Mode - Rich Bronze/Deep Gold tones */
+  --gold-50: #FDF9ED;
+  --gold-100: #F8EDB5;
+  --gold-200: #ECD073;
+  --gold-300: #DBAD35;
+  --gold-400: #B8881A;  /* Darker Gold */
+  --gold-500: #9C6E0F;  /* GMC Dark Gold for contrast */
+  --gold-600: #835B0B;
+  --gold-700: #6A4807;
+  --gold-800: #503604;
+  --gold-900: #382502;
+
+  --gold-text-gradient: linear-gradient(135deg, #7C520B 0%, #B8881A 50%, #4D3008 100%);
+  --gold-bg-gradient: linear-gradient(135deg, #9C6E0F 0%, #DBAD35 50%, #9C6E0F 100%);
+}
+
+/* Force dark text for buttons/elements with a gold background in light mode */
+.bg-gradient-gold,
+.bg-gold-500,
+.group-hover\:bg-gold-500:hover,
+[class*='bg-gold-500'],
+[class*='bg-gradient-gold'] {
+  --primary-dark: #070B13 !important;
 }
 
 body {
@@ -57,6 +139,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Custom Scrollbar */
@@ -64,10 +147,10 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #070B13;
+  background: var(--primary-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: #172237;
+  background: var(--primary-light);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -76,10 +159,11 @@ body {
 
 /* Glassmorphism Class utilities */
 .glass {
-  background: rgba(13, 20, 36, 0.45);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .glass-gold {
@@ -90,13 +174,13 @@ body {
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #FDFBF3 0%, #EED789 50%, #C28B15 100%);
+  background: var(--gold-text-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-gradient-gold {
-  background: linear-gradient(135deg, #C28B15 0%, #EED789 50%, #C28B15 100%);
+  background: var(--gold-bg-gradient);
 }
 
 .gold-border-glow {

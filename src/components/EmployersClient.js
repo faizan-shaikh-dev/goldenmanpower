@@ -63,8 +63,17 @@ export default function EmployersClient() {
     <div className="w-full">
       {/* Banner */}
       <section className="relative bg-primary-dark border-b border-white/5 py-20 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold-600/5 rounded-full blur-[80px] pointer-events-none" />
+        {/* Background Image Banner */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/header-bg.png" 
+            alt="Employers Solutions" 
+            className="w-full h-full object-cover opacity-15 brightness-75 scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/60 to-transparent" />
+        </div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none z-0" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold-600/5 rounded-full blur-[80px] pointer-events-none z-0" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <span className="text-[10px] font-bold text-gold-500 tracking-widest uppercase block mb-2">

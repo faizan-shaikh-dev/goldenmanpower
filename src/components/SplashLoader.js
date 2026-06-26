@@ -29,13 +29,13 @@ export default function SplashLoader() {
             opacity: 0,
             transition: { duration: 0.5, ease: "easeInOut" },
           }}
-          className="fixed inset-0 bg-[#070B13] z-[9999] flex flex-col items-center justify-center pointer-events-auto select-none"
+          className="fixed inset-0 bg-primary-dark z-[9999] flex flex-col items-center justify-center pointer-events-auto select-none"
         >
           {/* Ambient Glow */}
           <div className="absolute w-[400px] h-[400px] bg-gold-500/5 rounded-full blur-[100px] pointer-events-none animate-pulse-slow" />
           
           <div className="relative flex flex-col items-center z-10">
-            {/* Animated GMC Monogram Logo */}
+            {/* Animated GMC Logo */}
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{
@@ -43,11 +43,13 @@ export default function SplashLoader() {
                 opacity: 1,
                 transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
               }}
-              className="relative w-24 h-24 flex items-center justify-center rounded-2xl bg-gradient-to-br from-gold-600 to-gold-400 p-0.5 shadow-2xl shadow-gold-500/20"
+              className="relative w-36 h-36 flex items-center justify-center"
             >
-              <div className="w-full h-full bg-[#070B13] rounded-[14px] flex items-center justify-center">
-                <span className="font-serif font-black text-5xl text-gradient-gold">G</span>
-              </div>
+              <img 
+                src="/gmc-logo1.png" 
+                alt="GMC Logo" 
+                className="w-full h-full object-contain filter drop-shadow-[0_8px_16px_rgba(212,175,55,0.15)]"
+              />
             </motion.div>
 
             {/* Brand Name */}

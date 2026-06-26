@@ -4,13 +4,15 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Phone, Mail, Award, Facebook, Linkedin, Instagram } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, Mail, Award, Facebook, Linkedin, Instagram, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(false);
   const pathname = usePathname();
+  const { theme, toggleTheme, mounted } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +31,18 @@ export default function Navbar() {
     setIsOpen(false);
     setActiveDropdown(false);
   }, [pathname]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -102,29 +116,32 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           {/* Logo Brand */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-gold-600 to-gold-400 p-0.5 shadow-md shadow-gold-500/10 group-hover:scale-105 transition-transform duration-300">
-              <div className="w-full h-full bg-primary-dark rounded-[6px] flex items-center justify-center">
-                <span className="font-serif font-black text-xl text-gradient-gold">G</span>
+            <div className="flex items-center gap-2.5 shrink-0">
+              <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="/gmc-logo1.png" 
+                  alt="GMC Emblem" 
+                  className="w-full h-full object-contain"
+                />
               </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif font-bold text-sm tracking-widest text-gradient-gold group-hover:opacity-90 transition-opacity">
-                GOLDEN MANPOWER
-              </span>
-              <span className="text-[10px] text-slate-400 tracking-wider font-sans uppercase -mt-0.5">
-                Consultants
-              </span>
+              <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="/gmc-logo2.png" 
+                  alt="GMC Seal" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
-            <ul className="flex items-center gap-8 text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
+            <ul className="flex items-center gap-4 xl:gap-6 text-sm font-medium">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className={`relative py-2 transition-colors duration-200 ${
+                    className={`relative py-2 transition-colors duration-200 whitespace-nowrap ${
                       pathname === link.href
                         ? "text-gold-400"
                         : "text-slate-300 hover:text-white"
@@ -148,9 +165,13 @@ export default function Navbar() {
                 onMouseEnter={() => setActiveDropdown(true)}
                 onMouseLeave={() => setActiveDropdown(false)}
               >
-                <button
-                  className={`flex items-center gap-1 transition-colors duration-200 text-slate-300 hover:text-white cursor-pointer ${
-                    pathname.startsWith("/services") ? "text-gold-400" : ""
+                <Link
+                  href="/services"
+                  onClick={() => setActiveDropdown(false)}
+                  className={`relative flex items-center gap-1 transition-colors duration-200 cursor-pointer whitespace-nowrap ${
+                    pathname.startsWith("/services")
+                      ? "text-gold-400"
+                      : "text-slate-300 hover:text-white"
                   }`}
                 >
                   Services
@@ -160,7 +181,14 @@ export default function Navbar() {
                       activeDropdown ? "rotate-180 text-gold-400" : "text-slate-400"
                     }`}
                   />
-                </button>
+                  {pathname.startsWith("/services") && (
+                    <motion.span
+                      layoutId="activeNavLine"
+                      className="absolute bottom-0 left-0 w-full h-0.5 bg-gold-500"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </Link>
 
                 <AnimatePresence>
                   {activeDropdown && (
@@ -194,7 +222,7 @@ export default function Navbar() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className={`relative py-2 transition-colors duration-200 ${
+                    className={`relative py-2 transition-colors duration-200 whitespace-nowrap ${
                       pathname === link.href
                         ? "text-gold-400"
                         : "text-slate-300 hover:text-white"
@@ -213,9 +241,40 @@ export default function Navbar() {
               ))}
             </ul>
 
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="p-2.5 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-gold-400 hover:border-gold-500/30 hover:bg-gold-500/5 active:scale-90 transition-all duration-300 cursor-pointer flex items-center justify-center"
+              aria-label="Toggle theme"
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {mounted && theme === "light" ? (
+                  <motion.div
+                    key="moon"
+                    initial={{ rotate: -45, opacity: 0, scale: 0.8 }}
+                    animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                    exit={{ rotate: 45, opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    <Moon size={16} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="sun"
+                    initial={{ rotate: 45, opacity: 0, scale: 0.8 }}
+                    animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                    exit={{ rotate: -45, opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    <Sun size={16} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </button>
+
             <Link
               href="/contact"
-              className="bg-gradient-gold text-primary-dark hover:brightness-110 active:scale-95 transition-all text-xs font-bold px-5 py-2.5 rounded-full shadow-md shadow-gold-500/20"
+              className="bg-gradient-gold text-primary-dark hover:brightness-110 active:scale-95 transition-all text-xs font-bold px-5 py-2.5 rounded-full shadow-md shadow-gold-500/20 whitespace-nowrap"
             >
               Hire Talent
             </Link>
@@ -223,6 +282,37 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="flex lg:hidden items-center gap-4">
+            {/* Mobile Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 focus:outline-none cursor-pointer flex items-center justify-center"
+              aria-label="Toggle theme"
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {mounted && theme === "light" ? (
+                  <motion.div
+                    key="moon-mobile"
+                    initial={{ rotate: -45, opacity: 0, scale: 0.8 }}
+                    animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                    exit={{ rotate: 45, opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    <Moon size={20} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="sun-mobile"
+                    initial={{ rotate: 45, opacity: 0, scale: 0.8 }}
+                    animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                    exit={{ rotate: -45, opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    <Sun size={20} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </button>
+
             <a
               href="tel:+919769629783"
               className="sm:hidden text-gold-400 hover:text-gold-300 transition-colors"
@@ -263,14 +353,22 @@ export default function Navbar() {
               <div>
                 <div className="flex justify-between items-center mb-8">
                   <div className="flex items-center gap-2">
-                    <div className="relative w-8 h-8 flex items-center justify-center rounded bg-gradient-to-br from-gold-600 to-gold-400 p-0.5">
-                      <div className="w-full h-full bg-primary-dark rounded flex items-center justify-center">
-                        <span className="font-serif font-black text-sm text-gradient-gold">G</span>
+                    <div className="flex items-center gap-1.5 shrink-0">
+                      <div className="relative w-12 h-12 flex items-center justify-center">
+                        <img 
+                          src="/gmc-logo1.png" 
+                          alt="GMC Emblem" 
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <div className="relative w-12 h-12 flex items-center justify-center">
+                        <img 
+                          src="/gmc-logo2.png" 
+                          alt="GMC Seal" 
+                          className="w-full h-full object-contain"
+                        />
                       </div>
                     </div>
-                    <span className="font-serif font-bold text-xs tracking-wider text-gradient-gold">
-                      GOLDEN MANPOWER
-                    </span>
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}
@@ -287,6 +385,7 @@ export default function Navbar() {
                     </span>
                     <Link
                       href="/"
+                      onClick={() => setIsOpen(false)}
                       className={`text-base font-semibold py-1.5 transition-colors ${
                         pathname === "/" ? "text-gold-400" : "text-slate-300"
                       }`}
@@ -295,6 +394,7 @@ export default function Navbar() {
                     </Link>
                     <Link
                       href="/about"
+                      onClick={() => setIsOpen(false)}
                       className={`text-base font-semibold py-1.5 transition-colors ${
                         pathname === "/about" ? "text-gold-400" : "text-slate-300"
                       }`}
@@ -303,6 +403,7 @@ export default function Navbar() {
                     </Link>
                     <Link
                       href="/md-message"
+                      onClick={() => setIsOpen(false)}
                       className={`text-base font-semibold py-1.5 transition-colors ${
                         pathname === "/md-message" ? "text-gold-400" : "text-slate-300"
                       }`}
@@ -316,10 +417,20 @@ export default function Navbar() {
                       Services
                     </span>
                     <div className="pl-3 border-l border-white/10 flex flex-col gap-2.5">
+                      <Link
+                        href="/services"
+                        onClick={() => setIsOpen(false)}
+                        className={`text-sm font-semibold py-1 transition-colors ${
+                          pathname === "/services" ? "text-gold-400" : "text-gold-500/80 hover:text-gold-400"
+                        }`}
+                      >
+                        All Services
+                      </Link>
                       {services.map((item) => (
                         <Link
                           key={item.name}
                           href={item.href}
+                          onClick={() => setIsOpen(false)}
                           className={`text-sm py-1 transition-colors ${
                             pathname === item.href ? "text-gold-400" : "text-slate-400 hover:text-slate-300"
                           }`}
@@ -338,6 +449,7 @@ export default function Navbar() {
                       <Link
                         key={link.name}
                         href={link.href}
+                        onClick={() => setIsOpen(false)}
                         className={`text-base font-semibold py-1.5 transition-colors ${
                           pathname === link.href ? "text-gold-400" : "text-slate-300"
                         }`}

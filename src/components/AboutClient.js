@@ -25,8 +25,17 @@ export default function AboutClient() {
     <div className="w-full">
       {/* Page Header Banner */}
       <section className="relative bg-primary-dark border-b border-white/5 py-20 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold-600/5 rounded-full blur-[80px] pointer-events-none" />
+        {/* Background Image Banner */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/header-bg.png" 
+            alt="About GMC" 
+            className="w-full h-full object-cover opacity-15 brightness-75 scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/60 to-transparent" />
+        </div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none z-0" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold-600/5 rounded-full blur-[80px] pointer-events-none z-0" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <span className="text-[10px] font-bold text-gold-500 tracking-widest uppercase block mb-2">
@@ -95,25 +104,31 @@ export default function AboutClient() {
               className="lg:col-span-5 relative"
             >
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gold-500/5 rounded-full blur-[80px] pointer-events-none" />
-              <div className="relative glass-gold border border-gold-500/15 rounded-3xl p-8 sm:p-12 text-center flex flex-col items-center justify-center gap-6 shadow-2xl">
-                <div className="w-16 h-16 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center">
-                  <Award size={32} className="text-gold-500" />
+              
+              <div className="relative w-full max-w-md mx-auto">
+                {/* Team Image */}
+                <div className="relative w-full h-[320px] sm:h-[380px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                  <img 
+                    src="/about-team.jpg" 
+                    alt="GMC Sourcing Operations Team" 
+                    className="w-full h-full object-cover brightness-[0.85] contrast-[1.05]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent" />
                 </div>
-                <div>
-                  <h3 className="text-4xl font-extrabold text-white tracking-tight">25,000+</h3>
-                  <span className="text-xs text-gold-500 font-bold uppercase tracking-wider block mt-1">
-                    Successful Deployments
+                
+                {/* Overlay Highlight Box */}
+                <div className="absolute -bottom-6 -right-2 sm:-right-6 border border-gold-500/15 rounded-2xl p-6 glass-gold max-w-[220px] sm:max-w-[240px] shadow-2xl z-20 hover:border-gold-500/30 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center mb-3">
+                    <Award size={20} className="text-gold-500" />
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-none">25,000+</h3>
+                  <span className="text-[10px] text-gold-500 font-bold uppercase tracking-wider block mt-1">
+                    Deployments
                   </span>
+                  <p className="text-[10px] text-slate-400 mt-2 leading-relaxed">
+                    Mobilizing skilled craftsmen and engineers across international borders.
+                  </p>
                 </div>
-                <p className="text-xs text-slate-400 leading-relaxed max-w-xs">
-                  Mobilizing skilled craftsmen, technicians, engineers, and administrative staff safely across multiple international borders.
-                </p>
-                <Link
-                  href="/contact"
-                  className="bg-gradient-gold text-primary-dark hover:brightness-110 font-bold text-xs py-3 px-6 rounded-xl transition-all shadow-md shadow-gold-500/10"
-                >
-                  Consult Our Experts
-                </Link>
               </div>
             </motion.div>
           </div>
