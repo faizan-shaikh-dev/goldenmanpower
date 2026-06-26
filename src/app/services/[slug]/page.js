@@ -112,6 +112,17 @@ export async function generateMetadata({ params }) {
   };
 }
 
+export async function generateStaticParams() {
+  return [
+    { slug: "executive-search" },
+    { slug: "labour-contracting" },
+    { slug: "document-attestation" },
+    { slug: "domestic-recruitment" },
+    { slug: "hr-outsourcing" },
+    { slug: "recruitment" },
+  ];
+}
+
 export default async function ServiceDetailsPage({ params }) {
   const { slug } = await params;
   const data = servicesData[slug];
@@ -122,3 +133,4 @@ export default async function ServiceDetailsPage({ params }) {
 
   return <ServiceDetailsClient slug={slug} data={data} />;
 }
+

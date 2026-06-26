@@ -26,7 +26,7 @@ export default function ContactClient() {
   ];
 
   const details = {
-    indiaOffices: ["Mumbai (Mint Road, Fort)", "Jamshedpur (Jharkhand)"],
+    indiaOffices: ["Mumbai (Al Dayem Tour & Travel, Nagpada)", "Jamshedpur (Jharkhand)"],
     globalSourcing: [
       "Nepal",
       "Sri Lanka",
@@ -214,10 +214,10 @@ export default function ContactClient() {
               Location Map
             </span>
             <h2 className="text-2xl sm:text-3xl font-serif font-black text-white">
-              Find Our Head Office
+              Find Our Mumbai Emigration Office (MEO)
             </h2>
             <p className="text-slate-400 text-xs mt-2 leading-relaxed">
-              Visit our office in Virar, Maharashtra for physical candidate interviews, documentation audits, and corporate consultations.
+              Al Dayem Tour & Travel Enterprise, -4/6, Irshad Palace, Shop No. 3/5, 16 Varsova Street, Behind Zahoora Sweets (Vodaphone Shop Upper), Belasis Road, Mumbai - 400008.
             </p>
           </div>
 
@@ -229,14 +229,14 @@ export default function ContactClient() {
             className="w-full h-[400px] rounded-3xl overflow-hidden border border-white/5 bg-primary/40 shadow-2xl relative group"
           >
             <iframe
-              src="https://maps.google.com/maps?q=Shree%20Ram%20Square%2C%20Vartak%20Road%2C%20Virar%20West%2C%20Maharashtra%2C%20India&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Al%20Dayem%20Tour%20%26%20Travel%20Enterprise%2C%20Irshad%20Palace%2C%2016%20Varsova%20Street%2C%20Behind%20Zahoora%20Sweets%2C%20Belasis%20Road%2C%20Mumbai%20400008&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Golden Manpower Consultants Head Office Map"
+              title="Mumbai Emigration Office (MEO) Map"
               className="grayscale contrast-[1.1] invert-[0.92] opacity-80 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100 transition-all duration-700 ease-out"
             />
           </motion.div>
