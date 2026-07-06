@@ -119,7 +119,7 @@ export default function Navbar() {
             <div className="flex items-center gap-2.5 shrink-0">
               <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="/gmc-logo1.png" 
+                  src="/logo-5-light.png" 
                   alt="GMC Emblem" 
                   className="w-full h-full object-contain"
                 />
@@ -356,7 +356,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-1.5 shrink-0">
                       <div className="relative w-12 h-12 flex items-center justify-center">
                         <img 
-                          src="/gmc-logo1.png" 
+                          src="/logo-5-light.png" 
                           alt="GMC Emblem" 
                           className="w-full h-full object-contain"
                         />

@@ -46,7 +46,7 @@ export default function SplashLoader() {
               className="relative w-36 h-36 flex items-center justify-center"
             >
               <img 
-                src="/gmc-logo1.png" 
+                src="/logo-5-light.png" 
                 alt="GMC Logo" 
                 className="w-full h-full object-contain filter drop-shadow-[0_8px_16px_rgba(212,175,55,0.15)]"
               />

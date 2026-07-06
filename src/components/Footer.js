@@ -62,7 +62,7 @@ export default function Footer() {
               <div className="flex items-center gap-2 shrink-0">
                 <div className="relative w-11 h-11 flex items-center justify-center">
                   <img 
-                    src="/gmc-logo1.png" 
+                    src="/logo-5-light.png" 
                     alt="GMC Emblem" 
                     className="w-full h-full object-contain"
                   />
