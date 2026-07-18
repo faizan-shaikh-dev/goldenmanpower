@@ -6,7 +6,7 @@ const servicesData = {
     title: "Executive Search",
     subtitle: "Senior Leadership & Management Recruitment",
     icon: "Search",
-    desc: "Golden Manpower Consultants provides specialized headhunting and executive search solutions to recruit C-level executives, directors, VP-level officers, and critical mid-management personnel. We align our sourcing strategy with your business goals, corporate culture, and technical standards.",
+    desc: "Masha Allah Tours & Travels provides specialized headhunting and executive search solutions to recruit C-level executives, directors, VP-level officers, and critical mid-management personnel. We align our sourcing strategy with your business goals, corporate culture, and technical standards.",
     features: [
       "Board-level & C-Suite Recruitment campaigns",
       "Confidential search protocols for sensitive appointments",

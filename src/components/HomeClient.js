@@ -121,7 +121,7 @@ export default function HomeClient() {
               for Global Employers
             </h1>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl">
-              Golden Manpower Consultants is a premier recruitment organization registered under the Ministry of
+              Masha Allah Tours & Travels is a premier recruitment organization registered under the Ministry of
               External Affairs, India. Since 2006, we have specialized in delivering ethical, compliant, and deployment-ready
               workforce solutions for domestic and international employers.
             </p>
@@ -227,7 +227,7 @@ export default function HomeClient() {
                 Delivering Ethical & Compliant Recruitment Solutions Since 2006
               </h2>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Golden Manpower Consultants is a professionally managed manpower organization. We specialize in sourcing,
+                Masha Allah Tours & Travels is a professionally managed manpower organization. We specialize in sourcing,
                 evaluating, and deploying skilled professionals who meet technical and compliance benchmarks across
                 key industries worldwide.
               </p>
@@ -352,7 +352,7 @@ export default function HomeClient() {
                 Trusted Recruitment Partner for Global Workforce Solutions
               </h2>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Golden Manpower Consultants is trusted by major employers across India and the GCC countries for ethical
+                Masha Allah Tours & Travels is trusted by major employers across India and the GCC countries for ethical
                 hiring, regulatory clarity, and stable manpower delivery.
               </p>
               <div className="flex flex-col gap-3.5 mt-2">
@@ -447,7 +447,7 @@ export default function HomeClient() {
           <div className="relative p-8 sm:p-12 border border-white/10 rounded-2xl glass shadow-xl">
             <MessageSquare size={36} className="text-gold-500/20 absolute top-6 left-6" />
             <blockquote className="text-slate-200 text-sm sm:text-base leading-relaxed italic relative z-10">
-              "Golden Manpower Consultants has been a highly dependable recruitment partner, supplying competent manpower
+              "Masha Allah Tours & Travels has been a highly dependable recruitment partner, supplying competent manpower
               within our scheduled project timelines while maintaining high ethical recruitment standards."
             </blockquote>
             <div className="mt-8">

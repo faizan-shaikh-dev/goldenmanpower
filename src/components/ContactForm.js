@@ -82,7 +82,7 @@ export default function ContactForm() {
           <CheckCircle2 className="text-gold-500 w-16 h-16 animate-bounce mb-6" />
           <h3 className="text-2xl font-bold text-white mb-2">Message Sent Successfully!</h3>
           <p className="text-sm text-slate-400 max-w-sm mb-8">
-            Thank you for contacting Golden Manpower Consultants. Our representative will get back to you within 24 hours.
+            Thank you for contacting Masha Allah Tours & Travels. Our representative will get back to you within 24 hours.
           </p>
           <button
             onClick={() => setSubmitSuccess(false)}

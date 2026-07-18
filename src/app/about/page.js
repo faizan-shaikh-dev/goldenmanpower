@@ -2,7 +2,7 @@ import AboutClient from "@/components/AboutClient";
 
 export const metadata = {
   title: "About Us | Trusted Global Recruitment Partner",
-  description: "Learn about Golden Manpower Consultants, a government-licensed overseas and domestic manpower recruitment agency with 18+ years of experience. Registered with the Ministry of External Affairs, India, delivering ethical sourcing pipelines.",
+  description: "Learn about Masha Allah Tours & Travels, a government-licensed overseas and domestic manpower recruitment agency with 18+ years of experience. Registered with the Ministry of External Affairs, India, delivering ethical sourcing pipelines.",
   alternates: {
     canonical: "https://www.goldenmanpower.com/about",
   },

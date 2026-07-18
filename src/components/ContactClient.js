@@ -9,19 +9,19 @@ export default function ContactClient() {
   const offices = [
     {
       region: "OVERSEAS OFFICE – UAE",
-      name: "Golden Manpower Recruitment LLC FZ",
+      name: "Masha Allah Tours & Travels Recruitment LLC FZ",
       address: "Meydan Grandstand, 6th Floor, Meydan Road, Nad Al Sheba 1, Dubai, UAE.",
       phone: "+971 56 765 2561",
       landline: "+971 04 224 8016",
       whatsapp: "+971 58 574 5677",
-      email: "hruae@goldenmanpower.com",
+      email: "mashaallah551@yahoo.com.in",
     },
     {
       region: "HEAD OFFICE – INDIA",
-      name: "Golden Manpower Consultants",
-      address: "1A-201, Shree Ram Square, Above Tata Showroom, Vartak Road, Virar (West) – 401303, Maharashtra, India.",
-      phone: "+91 97696 29783",
-      email: "cv@goldenmanpower.com",
+      name: "Masha Allah Tours & Travels",
+      address: "F91, 1st Floor, Kohinoor City Mall, LBS Marg, Kurla (W), Mumbai – 400077",
+      phone: "022-4002-9606",
+      email: "mashaallah551@yahoo.com.in",
     },
   ];
 

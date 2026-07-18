@@ -118,7 +118,7 @@ export default function EmployersClient() {
                   Hire Manpower Now
                 </Link>
                 <span className="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
-                  <Phone size={14} className="text-gold-500" /> +91 97696 29783
+                  <Phone size={14} className="text-gold-500" /> 022-4002-9606
                 </span>
               </div>
             </motion.div>

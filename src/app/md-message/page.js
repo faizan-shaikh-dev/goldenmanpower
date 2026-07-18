@@ -2,7 +2,7 @@ import MdMessageClient from "@/components/MdMessageClient";
 
 export const metadata = {
   title: "MD Message | Leadership Vision & Ethics",
-  description: "Read the message from our Managing Director, Ashish K. Singh. Learn how Golden Manpower Consultants builds compliant global workforces and provides premium HR outsourcing solutions across India and the UAE.",
+  description: "Read the message from our Managing Director, Ashish K. Singh. Learn how Masha Allah Tours & Travels builds compliant global workforces and provides premium HR outsourcing solutions across India and the UAE.",
   alternates: {
     canonical: "https://www.goldenmanpower.com/md-message",
   },

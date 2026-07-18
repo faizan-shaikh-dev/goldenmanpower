@@ -92,7 +92,7 @@ export default function JobSeekersClient() {
               Candidate Values
             </span>
             <h2 className="text-3xl font-serif font-black text-white">
-              Why Candidates Trust Golden Manpower
+              Why Candidates Trust Masha Allah Tours & Travels
             </h2>
             <p className="text-slate-400 text-xs mt-3 leading-relaxed">
               Connecting skilled professionals with trusted employers for long-term career growth.
@@ -172,11 +172,11 @@ export default function JobSeekersClient() {
                   <h3 className="text-base font-bold text-white font-serif">Apply For Vacancies</h3>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Send your updated resume file directly to our deployment inbox: <strong className="text-white">cv@goldenmanpower.com</strong> or fill out this quick registration form below.
+                  Send your updated resume file directly to our deployment inbox: <strong className="text-white">mashaallah551@yahoo.com.in</strong> or fill out this quick registration form below.
                 </p>
                 <div className="border-t border-white/5 pt-4">
                   <a
-                    href="mailto:cv@goldenmanpower.com"
+                    href="mailto:mashaallah551@yahoo.com.in"
                     className="w-full text-center bg-gradient-gold text-primary-dark hover:brightness-110 active:scale-95 transition-all text-xs font-bold py-3 px-6 rounded-xl inline-block"
                   >
                     Email Resume Now

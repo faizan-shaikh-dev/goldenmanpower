@@ -2,7 +2,7 @@ import ContactClient from "@/components/ContactClient";
 
 export const metadata = {
   title: "Contact Us | Office Locations & Inquiries",
-  description: "Get in touch with Golden Manpower Consultants. Access phone numbers, emails, and address locations for our India Head Office (Virar, Mumbai) and Dubai UAE branch.",
+  description: "Get in touch with Masha Allah Tours & Travels. Access phone numbers, emails, and address locations for our India Head Office (Virar, Mumbai) and Dubai UAE branch.",
   alternates: {
     canonical: "https://www.goldenmanpower.com/contact",
   },

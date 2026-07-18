@@ -59,33 +59,17 @@ export default function Footer() {
           {/* Company Brief */}
           <div className="flex flex-col gap-5">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="flex items-center gap-2 shrink-0">
-                <div className="relative w-11 h-11 flex items-center justify-center">
-                  <img 
-                    src="/logo-5-light.png" 
-                    alt="GMC Emblem" 
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div className="relative w-11 h-11 flex items-center justify-center">
-                  <img 
-                    src="/gmc-logo2.png" 
-                    alt="GMC Seal" 
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif font-bold text-xs tracking-wider text-gradient-gold">
-                  GOLDEN MANPOWER
+              <div className="flex flex-col justify-center shrink-0">
+                <span className="font-serif font-bold text-2xl tracking-wider text-gradient-gold leading-none mb-1">
+                  MASHA ALLAH
                 </span>
-                <span className="text-[9px] text-slate-400 tracking-wider font-sans uppercase -mt-0.5">
-                  Consultants
+                <span className="text-xs text-slate-300 tracking-widest font-sans uppercase">
+                  Tours & Travels
                 </span>
               </div>
             </Link>
             <p className="text-xs leading-relaxed text-slate-400">
-              Golden Manpower Consultants is a government-licensed recruitment agency registered with the Ministry of
+              Masha Allah Tours & Travels is a government-licensed recruitment agency registered with the Ministry of
               External Affairs, India. We deliver ethical, compliant, and highly stable workforce solutions for global employers.
             </p>
             <div className="flex items-center gap-3 mt-2">
@@ -165,26 +149,21 @@ export default function Footer() {
                 <MapPin size={16} className="text-gold-500 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block mb-0.5">Head Office (India):</strong>
-                  1A-201, Shree Ram Square, Vartak Road, Virar (West) – 401303, Palghar, Maharashtra.
-                </div>
-              </div>
-              <div className="flex gap-2">
-                <MapPin size={16} className="text-gold-500 shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-white block mb-0.5">UAE Office (Dubai):</strong>
-                  Meydan Grandstand, 6th Floor, Meydan Road, Nad Al Sheba 1, Dubai, UAE.
+                  F91, 1st Floor, Kohinoor City Mall,<br />
+                  LBS Marg, Kurla (W),<br />
+                  Mumbai – 400077
                 </div>
               </div>
               <div className="flex items-center gap-2 border-t border-white/5 pt-3.5 mt-1">
                 <Phone size={14} className="text-gold-500 shrink-0" />
-                <a href="tel:+919769629783" className="hover:text-gold-400 transition-colors">
-                  +91 97696 29783
+                <a href="tel:02240029606" className="hover:text-gold-400 transition-colors">
+                  022-4002-9606
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-gold-500 shrink-0" />
-                <a href="mailto:info@goldenmanpower.com" className="hover:text-gold-400 transition-colors">
-                  info@goldenmanpower.com
+                <a href="mailto:mashaallah551@yahoo.com.in" className="hover:text-gold-400 transition-colors">
+                  mashaallah551@yahoo.com.in
                 </a>
               </div>
             </div>
@@ -196,7 +175,7 @@ export default function Footer() {
       <div className="border-t border-white/5 py-6 bg-black/40 text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
-            <p>© {currentYear} Golden Manpower Consultants. All Rights Reserved.</p>
+            <p>© {currentYear} Masha Allah Tours & Travels. All Rights Reserved.</p>
             <p className="text-[10px] text-slate-600 mt-1">
               Registered Lic. No: B-0384/MUM/PER/1000+/5/8135/2008 (Ministry of External Affairs, Govt. of India).
             </p>

@@ -75,7 +75,7 @@ export default function MdMessageClient() {
               <div>
                 <h3 className="text-lg font-bold text-white font-serif">Ashish K. Singh</h3>
                 <p className="text-xs text-gold-500 font-semibold uppercase tracking-wider">Managing Director</p>
-                <p className="text-[10px] text-slate-500 mt-0.5">Golden Manpower Consultants</p>
+                <p className="text-[10px] text-slate-500 mt-0.5">Masha Allah Tours & Travels</p>
               </div>
               <div className="border-t border-white/5 w-full pt-4 mt-2 flex flex-col gap-1 text-[11px] text-slate-400">
                 <span>Founded: 2006</span>
@@ -94,7 +94,7 @@ export default function MdMessageClient() {
             >
               <div className="border-l-4 border-gold-500 pl-5 mb-2">
                 <p className="text-slate-300 text-sm font-semibold italic">
-                  "Connect with Golden Manpower Consultants to explore trusted, ethical, and professionally driven recruitment partnerships."
+                  "Connect with Masha Allah Tours & Travels to explore trusted, ethical, and professionally driven recruitment partnerships."
                 </p>
               </div>
 
@@ -131,7 +131,7 @@ export default function MdMessageClient() {
                 Leadership Driven by Ethics & Accountability
               </h2>
               <p className="text-slate-400 text-sm leading-relaxed">
-                At Golden Manpower Consultants, leadership is built on responsibility, long-term vision, and ethical execution. Since our inception, we have focused on creating sustainable workforce solutions that support our clients' operational goals while ensuring compliance and candidate welfare.
+                At Masha Allah Tours & Travels, leadership is built on responsibility, long-term vision, and ethical execution. Since our inception, we have focused on creating sustainable workforce solutions that support our clients' operational goals while ensuring compliance and candidate welfare.
               </p>
             </div>
             <div className="lg:col-span-4 flex lg:justify-end">

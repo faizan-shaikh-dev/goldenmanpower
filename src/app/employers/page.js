@@ -2,7 +2,7 @@ import EmployersClient from "@/components/EmployersClient";
 
 export const metadata = {
   title: "Employers Manpower Solutions",
-  description: "Learn how Golden Manpower Consultants supports employers with ethical manpower supply, technical trade testing, post-deployment assistance, and custom hiring campaigns across India and Gulf countries.",
+  description: "Learn how Masha Allah Tours & Travels supports employers with ethical manpower supply, technical trade testing, post-deployment assistance, and custom hiring campaigns across India and Gulf countries.",
   alternates: {
     canonical: "https://www.goldenmanpower.com/employers",
   },

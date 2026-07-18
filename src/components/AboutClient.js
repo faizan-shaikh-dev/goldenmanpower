@@ -74,7 +74,7 @@ export default function AboutClient() {
                 Trusted Global Manpower Recruitment & Workforce Solutions
               </h2>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Golden Manpower Consultants (GMC) is a premier recruitment organization registered under the Ministry of External Affairs, Government of India. Over nearly two decades, we have partnered with businesses across the GCC and internationally, supplying vetted talent matching exact industry certifications.
+                Masha Allah Tours & Travels (GMC) is a premier recruitment organization registered under the Ministry of External Affairs, Government of India. Over nearly two decades, we have partnered with businesses across the GCC and internationally, supplying vetted talent matching exact industry certifications.
               </p>
               <p className="text-slate-400 text-sm leading-relaxed">
                 We handle the sourcing, skill evaluation, documentation processing, and legal deployment pipelines with zero compromise. By keeping candidate welfare at the heart of our operations, we ensure that companies receive stable and productive employees.
@@ -255,16 +255,16 @@ export default function AboutClient() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="mailto:cv@goldenmanpower.com"
+                href="mailto:mashaallah551@yahoo.com.in"
                 className="bg-gradient-gold text-primary-dark hover:brightness-110 active:scale-95 transition-all text-xs font-bold py-3.5 px-6 rounded-full inline-block"
               >
-                Email CV: cv@goldenmanpower.com
+                Email CV: mashaallah551@yahoo.com.in
               </a>
               <a
-                href="mailto:info@goldenmanpower.com"
+                href="mailto:mashaallah551@yahoo.com.in"
                 className="bg-white/5 border border-white/10 hover:border-gold-500 hover:text-gold-400 text-xs font-bold py-3.5 px-6 rounded-full inline-block transition-colors"
               >
-                Email Inquiry: info@goldenmanpower.com
+                Email Inquiry: mashaallah551@yahoo.com.in
               </a>
             </div>
           </div>

@@ -17,12 +17,12 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Golden Manpower Consultants | Overseas & Domestic Recruitment Experts",
-    template: "%s | Golden Manpower Consultants"
+    default: "Masha Allah Tours & Travels | Overseas & Domestic Recruitment Experts",
+    template: "%s | Masha Allah Tours & Travels"
   },
-  description: "Golden Manpower Consultants (GMC) is a government-licensed overseas and domestic recruitment agency registered with the Ministry of External Affairs, India. Delivering ethical, compliant, and deployment-ready workforce solutions across oil & gas, construction, healthcare, hospitality, logistics, and bulk staffing sectors.",
+  description: "Masha Allah Tours & Travels (GMC) is a government-licensed overseas and domestic recruitment agency registered with the Ministry of External Affairs, India. Delivering ethical, compliant, and deployment-ready workforce solutions across oil & gas, construction, healthcare, hospitality, logistics, and bulk staffing sectors.",
   keywords: [
-    "Golden Manpower Consultants",
+    "Masha Allah Tours & Travels",
     "manpower recruitment agency India",
     "overseas recruitment experts",
     "domestic hiring solutions",
@@ -33,9 +33,9 @@ export const metadata = {
     "Gulf recruitment consultants",
     "HR outsourcing India"
   ],
-  authors: [{ name: "Golden Manpower Consultants" }],
-  creator: "Golden Manpower Consultants",
-  publisher: "Golden Manpower Consultants",
+  authors: [{ name: "Masha Allah Tours & Travels" }],
+  creator: "Masha Allah Tours & Travels",
+  publisher: "Masha Allah Tours & Travels",
   formatDetection: {
     email: false,
     address: false,
@@ -46,10 +46,10 @@ export const metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Golden Manpower Consultants | Overseas & Domestic Recruitment Experts",
+    title: "Masha Allah Tours & Travels | Overseas & Domestic Recruitment Experts",
     description: "Government-licensed recruitment and manpower consultancy delivering ethical, compliant, and deployment-ready workforce solutions globally.",
     url: "https://www.goldenmanpower.com",
-    siteName: "Golden Manpower Consultants",
+    siteName: "Masha Allah Tours & Travels",
     locale: "en_US",
     type: "website",
   },
@@ -69,18 +69,18 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "EmploymentAgency",
-  "name": "Golden Manpower Consultants",
+  "name": "Masha Allah Tours & Travels",
   "image": "https://www.goldenmanpower.com/logo-preview.png",
   "@id": "https://www.goldenmanpower.com/#organization",
   "url": "https://www.goldenmanpower.com",
-  "telephone": "+919769629783",
+  "telephone": "022-4002-9606",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "1A-201, Shree Ram Square, Above Tata Showroom, Vartak Road, Virar (West)",
-    "addressLocality": "Palghar",
+    "streetAddress": "F91, 1st Floor, Kohinoor City Mall, LBS Marg, Kurla (W)",
+    "addressLocality": "Mumbai",
     "addressRegion": "Maharashtra",
-    "postalCode": "401303",
+    "postalCode": "400077",
     "addressCountry": "IN"
   },
   "geo": {

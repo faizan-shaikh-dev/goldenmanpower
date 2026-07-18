@@ -72,7 +72,7 @@ export default function Navbar() {
       <div className="hidden sm:block w-full bg-primary-dark border-b border-white/5 py-3 px-4 md:px-8 text-[11px] text-slate-400 z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="font-bold text-slate-200 tracking-wide">
-            Golden Manpower Consultants
+            Masha Allah Tours & Travels
           </div>
           <div className="flex items-center gap-4">
             <span className="text-[10px] text-slate-500 font-bold tracking-wider uppercase">FOLLOW US :</span>
@@ -116,21 +116,13 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           {/* Logo Brand */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex items-center gap-2.5 shrink-0">
-              <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <img 
-                  src="/logo-5-light.png" 
-                  alt="GMC Emblem" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <img 
-                  src="/gmc-logo2.png" 
-                  alt="GMC Seal" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
+            <div className="flex flex-col justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 py-1">
+              <span className="font-serif font-bold text-2xl sm:text-3xl tracking-wider text-gradient-gold leading-none mb-1">
+                MASHA ALLAH
+              </span>
+              <span className="text-xs sm:text-sm text-slate-300 tracking-widest font-sans uppercase">
+                Tours & Travels
+              </span>
             </div>
           </Link>
 
@@ -314,7 +306,7 @@ export default function Navbar() {
             </button>
 
             <a
-              href="tel:+919769629783"
+              href="tel:02240029606"
               className="sm:hidden text-gold-400 hover:text-gold-300 transition-colors"
             >
               <Phone size={20} />
@@ -353,21 +345,13 @@ export default function Navbar() {
               <div>
                 <div className="flex justify-between items-center mb-8">
                   <div className="flex items-center gap-2">
-                    <div className="flex items-center gap-1.5 shrink-0">
-                      <div className="relative w-12 h-12 flex items-center justify-center">
-                        <img 
-                          src="/logo-5-light.png" 
-                          alt="GMC Emblem" 
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                      <div className="relative w-12 h-12 flex items-center justify-center">
-                        <img 
-                          src="/gmc-logo2.png" 
-                          alt="GMC Seal" 
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
+                    <div className="flex flex-col justify-center shrink-0 py-1">
+                      <span className="font-serif font-bold text-xl tracking-wider text-gradient-gold leading-none mb-1">
+                        MASHA ALLAH
+                      </span>
+                      <span className="text-[11px] text-slate-300 tracking-widest font-sans uppercase">
+                        Tours & Travels
+                      </span>
                     </div>
                   </div>
                   <button
@@ -469,11 +453,11 @@ export default function Navbar() {
                   Hire Talent
                 </Link>
                 <div className="text-center text-xs text-slate-400 flex flex-col gap-1.5">
-                  <a href="tel:+919769629783" className="hover:text-gold-400">
-                    +91 97696 29783
+                  <a href="tel:02240029606" className="hover:text-gold-400">
+                    022-4002-9606
                   </a>
-                  <a href="mailto:info@goldenmanpower.com" className="hover:text-gold-400">
-                    info@goldenmanpower.com
+                  <a href="mailto:mashaallah551@yahoo.com.in" className="hover:text-gold-400">
+                    mashaallah551@yahoo.com.in
                   </a>
                 </div>
               </div>

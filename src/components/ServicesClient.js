@@ -207,7 +207,7 @@ export default function ServicesClient() {
               Let’s Build Your Workforce With Us!
             </h2>
             <p className="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto mb-8 leading-relaxed">
-              Partner with Golden Manpower Consultants for reliable recruitment solutions, timely manpower deployment, and end-to-end compliance support for your projects.
+              Partner with Masha Allah Tours & Travels for reliable recruitment solutions, timely manpower deployment, and end-to-end compliance support for your projects.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -217,10 +217,10 @@ export default function ServicesClient() {
                 Connect With Us
               </Link>
               <a
-                href="mailto:info@goldenmanpower.com"
+                href="mailto:mashaallah551@yahoo.com.in"
                 className="bg-white/5 border border-white/10 hover:border-gold-500 hover:text-gold-400 text-xs font-bold py-3.5 px-8 rounded-full transition-colors"
               >
-                Email Inquiry: info@goldenmanpower.com
+                Email Inquiry: mashaallah551@yahoo.com.in
               </a>
             </div>
           </div>
