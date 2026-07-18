@@ -125,6 +125,7 @@
   --gold-bg-gradient: linear-gradient(135deg, #9C6E0F 0%, #DBAD35 50%, #9C6E0F 100%);
 }
 
+
 /* Force dark text for buttons/elements with a gold background in light mode */
 .bg-gradient-gold,
 .bg-gold-500,

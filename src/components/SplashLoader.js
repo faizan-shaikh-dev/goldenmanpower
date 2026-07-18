@@ -35,38 +35,22 @@ export default function SplashLoader() {
           <div className="absolute w-[400px] h-[400px] bg-gold-500/5 rounded-full blur-[100px] pointer-events-none animate-pulse-slow" />
           
           <div className="relative flex flex-col items-center z-10">
-            {/* Animated GMC Logo */}
+            {/* Brand Name */}
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0, y: 10 }}
               animate={{
                 scale: 1,
                 opacity: 1,
-                transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-              }}
-              className="relative w-36 h-36 flex items-center justify-center"
-            >
-              <img 
-                src="/logo-5-light.png" 
-                alt="GMC Logo" 
-                className="w-full h-full object-contain filter drop-shadow-[0_8px_16px_rgba(212,175,55,0.15)]"
-              />
-            </motion.div>
-
-            {/* Brand Name */}
-            <motion.div
-              initial={{ y: 15, opacity: 0 }}
-              animate={{
                 y: 0,
-                opacity: 1,
-                transition: { delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
               }}
               className="flex flex-col items-center text-center mt-6"
             >
-              <span className="font-serif font-black text-xl tracking-[0.25em] text-gradient-gold">
-                GOLDEN MANPOWER
+              <span className="font-serif font-black text-3xl sm:text-4xl tracking-[0.15em] text-gradient-gold">
+                MASHA ALLAH
               </span>
-              <span className="text-xs text-slate-400 tracking-[0.3em] font-sans uppercase mt-1.5">
-                Consultants
+              <span className="text-sm sm:text-base text-slate-400 tracking-[0.25em] font-sans uppercase mt-2">
+                Tours & Travels
               </span>
             </motion.div>
 

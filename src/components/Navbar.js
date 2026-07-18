@@ -113,22 +113,22 @@ export default function Navbar() {
             : "bg-primary-dark/90 backdrop-blur-md py-5 border-b border-white/5"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6">
           {/* Logo Brand */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex flex-col justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 py-1">
-              <span className="font-serif font-bold text-2xl sm:text-3xl tracking-wider text-gradient-gold leading-none mb-1">
+          <Link href="/" className="flex items-center group shrink-0">
+            <div className="flex flex-col justify-center group-hover:scale-105 transition-transform duration-300 py-1">
+              <span className="font-serif font-bold text-lg xl:text-2xl 2xl:text-3xl tracking-wider text-gradient-gold leading-none mb-0.5 whitespace-nowrap">
                 MASHA ALLAH
               </span>
-              <span className="text-xs sm:text-sm text-slate-300 tracking-widest font-sans uppercase">
+              <span className="text-[9px] xl:text-[11px] 2xl:text-xs text-slate-300 tracking-widest font-sans uppercase whitespace-nowrap">
                 Tours & Travels
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
-            <ul className="flex items-center gap-4 xl:gap-6 text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-5 shrink-0">
+            <ul className="flex items-center gap-3 xl:gap-5 text-sm font-medium">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <Link

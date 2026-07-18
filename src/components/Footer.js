@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, ArrowRight, Linkedin, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight, Linkedin, Facebook, Instagram, FileText } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,9 +24,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-primary-dark border-t border-white/5 text-slate-300">
+    <footer className="bg-primary-dark text-slate-300 border-t-2 border-gold-500/30">
       {/* Top Banner / Sourcing Countries */}
-      <div className="border-b border-white/5 py-8 bg-black/20">
+      <div className="border-b border-gold-500/10 py-8 bg-black/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
@@ -42,7 +42,7 @@ export default function Footer() {
                 (country) => (
                   <span
                     key={country}
-                    className="text-[11px] font-medium bg-primary py-1 px-3 rounded-full border border-white/5 text-slate-300 shadow-sm hover:border-gold-500/30 hover:text-gold-400 transition-colors"
+                    className="text-[11px] font-medium bg-primary py-1 px-3 rounded-full border border-gold-500/20 text-slate-300 shadow-sm hover:border-gold-500/40 hover:text-gold-400 transition-colors"
                   >
                     {country}
                   </span>
@@ -154,6 +154,13 @@ export default function Footer() {
                   Mumbai – 400077
                 </div>
               </div>
+              <div className="flex gap-2 mt-1">
+                <FileText size={16} className="text-gold-500 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-white block mb-0.5">Registration Number:</strong>
+                  Regd. No. B-0885/MUM/PER/1000+/5/7939/2007
+                </div>
+              </div>
               <div className="flex items-center gap-2 border-t border-white/5 pt-3.5 mt-1">
                 <Phone size={14} className="text-gold-500 shrink-0" />
                 <a href="tel:02240029606" className="hover:text-gold-400 transition-colors">
@@ -172,7 +179,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Sub-Footer */}
-      <div className="border-t border-white/5 py-6 bg-black/40 text-xs text-slate-500">
+      <div className="border-t border-gold-500/10 py-6 bg-black/5 text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
             <p>© {currentYear} Masha Allah Tours & Travels. All Rights Reserved.</p>
