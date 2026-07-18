@@ -178,7 +178,7 @@ export default function HomeClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Grid 1: Images Mock/Branding */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -186,25 +186,25 @@ export default function HomeClient() {
               className="lg:col-span-5 relative w-full flex justify-center py-6 sm:py-0"
             >
               <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-gold-500/5 rounded-full blur-[80px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
-              
+
               <div className="relative w-full max-w-md">
                 {/* Sourcing Image */}
                 <div className="relative w-full h-[320px] sm:h-[360px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                  <img 
-                    src="/home3-img04.jpg" 
-                    alt="GMC Sourcing Operations" 
+                  <img
+                    src="/home3-img04.jpg"
+                    alt="GMC Sourcing Operations"
                     className="w-full h-full object-cover brightness-[0.85] contrast-[1.05]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent" />
                 </div>
-                
+
                 {/* Floating Licence Badge */}
                 <div className="absolute -bottom-6 -right-2 sm:-right-6 border border-white/10 rounded-xl p-4 sm:p-5 glass max-w-[240px] sm:max-w-[260px] shadow-2xl z-20 hover:border-gold-500/30 transition-all duration-300">
                   <span className="text-[9px] font-bold text-gold-500 tracking-widest uppercase mb-1 block">
                     Regd License No.
                   </span>
                   <h4 className="text-[11px] sm:text-xs font-bold text-white mb-3 font-mono tracking-tight pb-1.5 border-b border-white/5">
-                    B-0384/MUM/PER/1000+/5/8135/2008
+                    B-0885/MUM/PER/1000+/5/7939/2007
                   </h4>
                   <div className="flex items-center gap-2.5">
                     <div className="w-7 h-7 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center shrink-0">
@@ -258,9 +258,9 @@ export default function HomeClient() {
 
             <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left gap-3.5">
               <div className="relative w-36 h-36 rounded-full bg-gradient-to-br from-gold-600 to-gold-400 p-0.5 shadow-xl shadow-gold-500/10 overflow-hidden shrink-0">
-                <img 
-                  src={ceo.image} 
-                  alt={`${ceo.name}, ${ceo.title}`} 
+                <img
+                  src={ceo.image}
+                  alt={`${ceo.name}, ${ceo.title}`}
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
