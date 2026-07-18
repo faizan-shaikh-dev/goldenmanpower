@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Users, Shield, UserCheck, HeartHandshake } from "lucide-react";
+import { leaders } from "@/data/leaders";
 
 export default function MdMessageClient() {
   const leadershipValues = [
@@ -31,7 +32,7 @@ export default function MdMessageClient() {
         <div className="absolute inset-0 z-0">
           <img 
             src="/header-bg.png" 
-            alt="MD Message" 
+            alt="Leadership Vision" 
             className="w-full h-full object-cover opacity-15 brightness-75 scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/60 to-transparent" />
@@ -44,80 +45,85 @@ export default function MdMessageClient() {
             Leadership Communication
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-white mb-4">
-            MD Message
+            Leadership Vision
           </h1>
           <div className="text-xs text-slate-400 flex justify-center items-center gap-2">
             <Link href="/" className="hover:text-gold-400">Home</Link>
             <span className="text-slate-600">/</span>
-            <span className="text-white font-semibold">MD Message</span>
+            <span className="text-white font-semibold">Leadership Vision</span>
           </div>
         </div>
       </section>
 
-      {/* Message Content */}
-      <section className="py-24 bg-primary relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            {/* MD Profile Left */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="lg:col-span-4 flex flex-col items-center text-center gap-4 bg-primary-dark border border-white/5 rounded-2xl p-8 shadow-xl sticky top-28"
-            >
-              <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-gold-600 to-gold-400 p-0.5 shadow-md shadow-gold-500/5 overflow-hidden shrink-0">
-                <img 
-                  src="/md-profile.jpg" 
-                  alt="Ashish K. Singh, MD" 
-                  className="w-full h-full object-cover rounded-full"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white font-serif">Ashish K. Singh</h3>
-                <p className="text-xs text-gold-500 font-semibold uppercase tracking-wider">Managing Director</p>
-                <p className="text-[10px] text-slate-500 mt-0.5">Masha Allah Tours & Travels</p>
-              </div>
-              <div className="border-t border-white/5 w-full pt-4 mt-2 flex flex-col gap-1 text-[11px] text-slate-400">
-                <span>Founded: 2006</span>
-                <span>Offices: UAE & India</span>
-                <span className="text-gold-500">Government Approved Licence</span>
-              </div>
-            </motion.div>
+      {/* Leadership Cards */}
+      {leaders.map((leader, idx) => (
+        <section
+          key={leader.name}
+          className={`py-24 relative ${idx % 2 === 0 ? "bg-primary" : "bg-primary-dark"} ${idx > 0 ? "border-t border-white/5" : ""}`}
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+              {/* Leader Profile Left */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className={`lg:col-span-4 flex flex-col items-center text-center gap-4 ${idx % 2 === 0 ? "bg-primary-dark" : "bg-primary"} border border-white/5 rounded-2xl p-8 shadow-xl`}
+              >
+                <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-gold-600 to-gold-400 p-0.5 shadow-md shadow-gold-500/5 overflow-hidden shrink-0">
+                  <img 
+                    src={leader.image} 
+                    alt={`${leader.name}, ${leader.title}`} 
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white font-serif">{leader.name}</h3>
+                  <p className="text-xs text-gold-500 font-semibold uppercase tracking-wider">{leader.title}</p>
+                  <p className="text-[10px] text-slate-500 mt-0.5">{leader.company}</p>
+                </div>
+                <div className="border-t border-white/5 w-full pt-4 mt-2 flex flex-col gap-1 text-[11px] text-slate-400">
+                  <span>Founded: 2006</span>
+                  <span>Offices: UAE & India</span>
+                  <span className="text-gold-500">Government Approved Licence</span>
+                </div>
+              </motion.div>
 
-            {/* Message Right */}
-            <motion.div
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="lg:col-span-8 flex flex-col gap-6 text-left"
-            >
-              <div className="border-l-4 border-gold-500 pl-5 mb-2">
-                <p className="text-slate-300 text-sm font-semibold italic">
-                  "Connect with Masha Allah Tours & Travels to explore trusted, ethical, and professionally driven recruitment partnerships."
-                </p>
-              </div>
+              {/* Message Right */}
+              <motion.div
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="lg:col-span-8 flex flex-col gap-6 text-left"
+              >
+                <div className="border-l-4 border-gold-500 pl-5 mb-2">
+                  <p className="text-slate-300 text-sm font-semibold italic">
+                    &quot;Connect with Masha Allah Tours &amp; Travels to explore trusted, ethical, and professionally driven recruitment partnerships.&quot;
+                  </p>
+                </div>
 
-              <div className="text-slate-400 text-sm leading-relaxed flex flex-col gap-6">
-                <p>
-                  We take our commitment to corporate responsibility very seriously, as it forms the foundation of our organizational culture and long-term success. This commitment enables us to attract, retain, and continuously develop high-quality talent across the UAE, Gulf region, and other international markets. By fostering a transparent, ethical, and inclusive recruitment environment, we ensure that our workforce is empowered to perform at the highest professional standards.
-                </p>
-                <p>
-                  Our HR Outsourcing and manpower services are structured to deliver best-in-class workforce solutions, seamlessly integrated with our clients' technical operations and infrastructure projects. Through carefully designed processes, compliance-driven practices, and ongoing post-placement monitoring, we support our clients in achieving operational efficiency, crew stability, and sustainable growth.
-                </p>
-                <p>
-                  At GMC, we do not view ourselves merely as vendors. We act as strategic growth enablers, ensuring the success of your industrial goals through ethical personnel selection.
-                </p>
-              </div>
+                <div className="text-slate-400 text-sm leading-relaxed flex flex-col gap-6">
+                  <p>
+                    We take our commitment to corporate responsibility very seriously, as it forms the foundation of our organizational culture and long-term success. This commitment enables us to attract, retain, and continuously develop high-quality talent across the UAE, Gulf region, and other international markets. By fostering a transparent, ethical, and inclusive recruitment environment, we ensure that our workforce is empowered to perform at the highest professional standards.
+                  </p>
+                  <p>
+                    Our HR Outsourcing and manpower services are structured to deliver best-in-class workforce solutions, seamlessly integrated with our clients&apos; technical operations and infrastructure projects. Through carefully designed processes, compliance-driven practices, and ongoing post-placement monitoring, we support our clients in achieving operational efficiency, crew stability, and sustainable growth.
+                  </p>
+                  <p>
+                    At GMC, we do not view ourselves merely as vendors. We act as strategic growth enablers, ensuring the success of your industrial goals through ethical personnel selection.
+                  </p>
+                </div>
 
-              <div className="mt-4 border-t border-white/5 pt-6 flex flex-col items-start gap-1">
-                <span className="font-serif font-bold text-white">Ashish K. Singh</span>
-                <span className="text-xs text-slate-500">Managing Director, GMC Group</span>
-              </div>
-            </motion.div>
+                <div className="mt-4 border-t border-white/5 pt-6 flex flex-col items-start gap-1">
+                  <span className="font-serif font-bold text-white">{leader.name}</span>
+                  <span className="text-xs text-slate-500">{leader.shortTitle}</span>
+                </div>
+              </motion.div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       {/* Leadership Driven by Ethics Section */}
       <section className="py-24 bg-primary-dark border-t border-white/5 relative">
@@ -131,7 +137,7 @@ export default function MdMessageClient() {
                 Leadership Driven by Ethics & Accountability
               </h2>
               <p className="text-slate-400 text-sm leading-relaxed">
-                At Masha Allah Tours & Travels, leadership is built on responsibility, long-term vision, and ethical execution. Since our inception, we have focused on creating sustainable workforce solutions that support our clients' operational goals while ensuring compliance and candidate welfare.
+                At Masha Allah Tours & Travels, leadership is built on responsibility, long-term vision, and ethical execution. Since our inception, we have focused on creating sustainable workforce solutions that support our clients&apos; operational goals while ensuring compliance and candidate welfare.
               </p>
             </div>
             <div className="lg:col-span-4 flex lg:justify-end">

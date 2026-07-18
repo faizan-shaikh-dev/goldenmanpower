@@ -15,6 +15,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import { ceo } from "@/data/leaders";
 
 export default function HomeClient() {
   const containerVariants = {
@@ -258,14 +259,14 @@ export default function HomeClient() {
             <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left gap-3.5">
               <div className="relative w-36 h-36 rounded-full bg-gradient-to-br from-gold-600 to-gold-400 p-0.5 shadow-xl shadow-gold-500/10 overflow-hidden shrink-0">
                 <img 
-                  src="/md-profile.jpg" 
-                  alt="Ashish K. Singh, MD" 
+                  src={ceo.image} 
+                  alt={`${ceo.name}, ${ceo.title}`} 
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-white font-serif">Ashish K. Singh</h4>
-                <p className="text-xs text-gold-500 font-semibold tracking-wider uppercase">Managing Director</p>
+                <h4 className="text-lg font-bold text-white font-serif">{ceo.name}</h4>
+                <p className="text-xs text-gold-500 font-semibold tracking-wider uppercase">{ceo.title}</p>
               </div>
             </div>
 

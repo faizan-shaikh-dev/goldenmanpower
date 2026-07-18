@@ -47,7 +47,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "MD Message", href: "/md-message" },
+    { name: "Leadership Vision", href: "/md-message" },
   ];
 
   const services = [
@@ -107,11 +107,10 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <header
-        className={`sticky top-0 w-full z-40 transition-all duration-300 ${
-          isScrolled
+        className={`sticky top-0 w-full z-40 transition-all duration-300 ${isScrolled
             ? "bg-primary-dark/95 backdrop-blur-md py-3 border-b border-white/10 shadow-lg shadow-black/20"
             : "bg-primary-dark/90 backdrop-blur-md py-5 border-b border-white/5"
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6">
           {/* Logo Brand */}
@@ -133,11 +132,10 @@ export default function Navbar() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className={`relative py-2 transition-colors duration-200 whitespace-nowrap ${
-                      pathname === link.href
+                    className={`relative py-2 transition-colors duration-200 whitespace-nowrap ${pathname === link.href
                         ? "text-gold-400"
                         : "text-slate-300 hover:text-white"
-                    }`}
+                      }`}
                   >
                     {link.name}
                     {pathname === link.href && (
@@ -160,18 +158,16 @@ export default function Navbar() {
                 <Link
                   href="/services"
                   onClick={() => setActiveDropdown(false)}
-                  className={`relative flex items-center gap-1 transition-colors duration-200 cursor-pointer whitespace-nowrap ${
-                    pathname.startsWith("/services")
+                  className={`relative flex items-center gap-1 transition-colors duration-200 cursor-pointer whitespace-nowrap ${pathname.startsWith("/services")
                       ? "text-gold-400"
                       : "text-slate-300 hover:text-white"
-                  }`}
+                    }`}
                 >
                   Services
                   <ChevronDown
                     size={14}
-                    className={`transition-transform duration-300 ${
-                      activeDropdown ? "rotate-180 text-gold-400" : "text-slate-400"
-                    }`}
+                    className={`transition-transform duration-300 ${activeDropdown ? "rotate-180 text-gold-400" : "text-slate-400"
+                      }`}
                   />
                   {pathname.startsWith("/services") && (
                     <motion.span
@@ -196,11 +192,10 @@ export default function Navbar() {
                         <Link
                           key={item.name}
                           href={item.href}
-                          className={`block px-5 py-2.5 text-xs text-slate-300 hover:bg-gold-500/10 hover:text-gold-300 transition-colors border-l-2 ${
-                            pathname === item.href
+                          className={`block px-5 py-2.5 text-xs text-slate-300 hover:bg-gold-500/10 hover:text-gold-300 transition-colors border-l-2 ${pathname === item.href
                               ? "border-gold-500 bg-gold-500/5 text-gold-400"
                               : "border-transparent"
-                          }`}
+                            }`}
                         >
                           {item.name}
                         </Link>
@@ -214,11 +209,10 @@ export default function Navbar() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className={`relative py-2 transition-colors duration-200 whitespace-nowrap ${
-                      pathname === link.href
+                    className={`relative py-2 transition-colors duration-200 whitespace-nowrap ${pathname === link.href
                         ? "text-gold-400"
                         : "text-slate-300 hover:text-white"
-                    }`}
+                      }`}
                   >
                     {link.name}
                     {pathname === link.href && (
@@ -370,29 +364,26 @@ export default function Navbar() {
                     <Link
                       href="/"
                       onClick={() => setIsOpen(false)}
-                      className={`text-base font-semibold py-1.5 transition-colors ${
-                        pathname === "/" ? "text-gold-400" : "text-slate-300"
-                      }`}
+                      className={`text-base font-semibold py-1.5 transition-colors ${pathname === "/" ? "text-gold-400" : "text-slate-300"
+                        }`}
                     >
                       Home
                     </Link>
                     <Link
                       href="/about"
                       onClick={() => setIsOpen(false)}
-                      className={`text-base font-semibold py-1.5 transition-colors ${
-                        pathname === "/about" ? "text-gold-400" : "text-slate-300"
-                      }`}
+                      className={`text-base font-semibold py-1.5 transition-colors ${pathname === "/about" ? "text-gold-400" : "text-slate-300"
+                        }`}
                     >
                       About Us
                     </Link>
                     <Link
                       href="/md-message"
                       onClick={() => setIsOpen(false)}
-                      className={`text-base font-semibold py-1.5 transition-colors ${
-                        pathname === "/md-message" ? "text-gold-400" : "text-slate-300"
-                      }`}
+                      className={`text-base font-semibold py-1.5 transition-colors ${pathname === "/md-message" ? "text-gold-400" : "text-slate-300"
+                        }`}
                     >
-                      MD Message
+                      Leadership Vision
                     </Link>
                   </div>
 
@@ -404,9 +395,8 @@ export default function Navbar() {
                       <Link
                         href="/services"
                         onClick={() => setIsOpen(false)}
-                        className={`text-sm font-semibold py-1 transition-colors ${
-                          pathname === "/services" ? "text-gold-400" : "text-gold-500/80 hover:text-gold-400"
-                        }`}
+                        className={`text-sm font-semibold py-1 transition-colors ${pathname === "/services" ? "text-gold-400" : "text-gold-500/80 hover:text-gold-400"
+                          }`}
                       >
                         All Services
                       </Link>
@@ -415,9 +405,8 @@ export default function Navbar() {
                           key={item.name}
                           href={item.href}
                           onClick={() => setIsOpen(false)}
-                          className={`text-sm py-1 transition-colors ${
-                            pathname === item.href ? "text-gold-400" : "text-slate-400 hover:text-slate-300"
-                          }`}
+                          className={`text-sm py-1 transition-colors ${pathname === item.href ? "text-gold-400" : "text-slate-400 hover:text-slate-300"
+                            }`}
                         >
                           {item.name}
                         </Link>
@@ -434,9 +423,8 @@ export default function Navbar() {
                         key={link.name}
                         href={link.href}
                         onClick={() => setIsOpen(false)}
-                        className={`text-base font-semibold py-1.5 transition-colors ${
-                          pathname === link.href ? "text-gold-400" : "text-slate-300"
-                        }`}
+                        className={`text-base font-semibold py-1.5 transition-colors ${pathname === link.href ? "text-gold-400" : "text-slate-300"
+                          }`}
                       >
                         {link.name}
                       </Link>

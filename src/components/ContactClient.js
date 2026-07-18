@@ -7,22 +7,23 @@ import ContactForm from "@/components/ContactForm";
 
 export default function ContactClient() {
   const offices = [
-    {
-      region: "OVERSEAS OFFICE – UAE",
-      name: "Masha Allah Tours & Travels Recruitment LLC FZ",
-      address: "Meydan Grandstand, 6th Floor, Meydan Road, Nad Al Sheba 1, Dubai, UAE.",
-      phone: "+971 56 765 2561",
-      landline: "+971 04 224 8016",
-      whatsapp: "+971 58 574 5677",
-      email: "mashaallah551@yahoo.com.in",
-    },
+    // {
+    //   region: "OVERSEAS OFFICE – UAE",
+    //   name: "Masha Allah Tours & Travels Recruitment LLC FZ",
+    //   address: "Meydan Grandstand, 6th Floor, Meydan Road, Nad Al Sheba 1, Dubai, UAE.",
+    //   phone: "+971 56 765 2561",
+    //   landline: "+971 04 224 8016",
+    //   whatsapp: "+971 58 574 5677",
+    //   email: "mashaallah551@yahoo.com.in",
+    // },
     {
       region: "HEAD OFFICE – INDIA",
       name: "Masha Allah Tours & Travels",
       address: "F91, 1st Floor, Kohinoor City Mall, LBS Marg, Kurla (W), Mumbai – 400077",
-      phone: "022-4002-9606",
-      email: "mashaallah551@yahoo.com.in",
+      phone: "+91 9326899470",
+      email: "info@Mashaallah.in",
     },
+
   ];
 
   const details = {
@@ -47,9 +48,9 @@ export default function ContactClient() {
       <section className="relative bg-primary-dark border-b border-white/5 py-20 text-center overflow-hidden">
         {/* Background Image Banner */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/header-bg.png" 
-            alt="Contact GMC" 
+          <img
+            src="/header-bg.png"
+            alt="Contact GMC"
             className="w-full h-full object-cover opacity-15 brightness-75 scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/60 to-transparent" />

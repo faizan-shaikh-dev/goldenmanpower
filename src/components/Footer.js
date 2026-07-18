@@ -161,16 +161,29 @@ export default function Footer() {
                   Regd. No. B-0885/MUM/PER/1000+/5/7939/2007
                 </div>
               </div>
-              <div className="flex items-center gap-2 border-t border-white/5 pt-3.5 mt-1">
-                <Phone size={14} className="text-gold-500 shrink-0" />
-                <a href="tel:02240029606" className="hover:text-gold-400 transition-colors">
-                  022-4002-9606
+              <div className="flex flex-col gap-2">
+
+                <a href="tel:+919326899470" className="flex items-center gap-2 hover:text-gold-400 transition-colors">
+                  <Phone size={14} className="text-gold-500" />
+                  +91 9326899470
                 </a>
+
+                <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-gold-400 transition-colors">
+                  <Phone size={14} className="text-gold-500" />
+                  +91 9172103960
+                </a>
+
+                <a href="tel:+919988776655" className="flex items-center gap-2 hover:text-gold-400 transition-colors">
+                  <Phone size={14} className="text-gold-500" />
+                  +91 9323498837
+                </a>
+
               </div>
+
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-gold-500 shrink-0" />
                 <a href="mailto:mashaallah551@yahoo.com.in" className="hover:text-gold-400 transition-colors">
-                  mashaallah551@yahoo.com.in
+                  info@Mashaallah.in
                 </a>
               </div>
             </div>
